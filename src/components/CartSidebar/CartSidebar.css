@@ -1,0 +1,114 @@
+.cart-sidebar {
+  width: 380px;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 90px;
+  height: calc(100vh - 120px);
+  box-shadow: var(--shadow-sm);
+}
+
+.cart-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cart-items-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.empty-cart {
+  text-align: center;
+  color: var(--text-muted);
+  margin-top: 2rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart-item-img {
+  font-size: 2rem;
+  background: var(--bg-color);
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-info h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.cart-item-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.cart-item-price { color: var(--text-main); font-weight: 600; }
+
+.btn-remove {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+.btn-remove:hover {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+.cart-footer {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.btn-checkout {
+  width: 100%;
+  background: var(--text-main);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-checkout:hover:not(:disabled) {
+  background: #000;
+}
+.btn-checkout:disabled {
+  background: var(--border-color);
+  color: var(--text-muted);
+  cursor: not-allowed;
+}

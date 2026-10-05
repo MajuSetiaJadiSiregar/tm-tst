@@ -1,0 +1,79 @@
+.product-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.product-image {
+  font-size: 5rem;
+  text-align: center;
+  padding: 2rem 0;
+  background: var(--bg-color);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.product-details {
+  flex: 1;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.product-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.product-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.qty-input {
+  width: 60px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  outline: none;
+}
+.qty-input:focus { border-color: var(--primary); }
+
+.btn-add {
+  flex: 1;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-add:hover {
+  background: var(--primary-hover);
+}
