@@ -11,7 +11,7 @@
 .toast {
   padding: 1rem 1.5rem;
   border-radius: 8px;
-  background: white;
+  background: var(--surface-color);
   color: var(--text-main);
   box-shadow: var(--shadow-lg);
   animation: slideIn 0.3s ease;
@@ -22,4 +22,12 @@
 @keyframes slideIn {
   from { transform: translateX(100%); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }
+}
+
+@media (max-width: 640px) {
+  .toast-container {
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+  }
 }

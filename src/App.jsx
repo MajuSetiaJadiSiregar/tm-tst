@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { CartProvider } from './context/CartContext';
 import { ToastProvider } from './context/ToastContext';
+import { ThemeProvider } from './context/ThemeContext';
 import Header from './components/Header/Header';
 import ProductCard from './components/ProductCard/ProductCard';
 import CartSidebar from './components/CartSidebar/CartSidebar';
@@ -28,7 +29,7 @@ function ShopContent() {
     <>
       <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <main className="main-container">
-        <div style={{ flex: 1 }}>
+        <div style={{ flex: 1, width: '100%' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1.5rem' }}>
             {filteredProducts.map(p => (
               <ProductCard key={p.id} product={p} />
@@ -49,10 +50,12 @@ function ShopContent() {
 
 export default function App() {
   return (
-    <ToastProvider>
-      <CartProvider>
-        <ShopContent />
-      </CartProvider>
-    </ToastProvider>
+    <ThemeProvider>
+      <ToastProvider>
+        <CartProvider>
+          <ShopContent />
+        </CartProvider>
+      </ToastProvider>
+    </ThemeProvider>
   );
 }

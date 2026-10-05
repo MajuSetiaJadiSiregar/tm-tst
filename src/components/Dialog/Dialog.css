@@ -1,7 +1,7 @@
 .dialog-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,6 +17,7 @@
   max-width: 400px;
   box-shadow: var(--shadow-lg);
   animation: slideUp 0.2s;
+  color: var(--text-main);
 }
 
 .dialog-content h3 {
@@ -42,6 +43,7 @@
   font-weight: 600;
   cursor: pointer;
   border: none;
+  transition: background 0.2s;
 }
 
 .btn-cancel {
@@ -61,3 +63,15 @@
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+@media (max-width: 480px) {
+  .dialog-content {
+    padding: 1.5rem;
+  }
+  .dialog-actions {
+    flex-direction: column;
+  }
+  .dialog-actions button {
+    width: 100%;
+  }
+}

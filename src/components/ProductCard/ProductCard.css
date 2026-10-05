@@ -5,7 +5,7 @@
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
 }
 
 .product-card:hover {
@@ -20,6 +20,7 @@
   background: var(--bg-color);
   border-radius: 8px;
   margin-bottom: 1rem;
+  transition: background-color 0.3s;
 }
 
 .product-details {
@@ -30,6 +31,7 @@
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  color: var(--text-main);
 }
 
 .product-price {
@@ -59,6 +61,8 @@
   text-align: center;
   font-weight: 600;
   outline: none;
+  background: var(--bg-color);
+  color: var(--text-main);
 }
 .qty-input:focus { border-color: var(--primary); }
 
